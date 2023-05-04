@@ -1,0 +1,256 @@
+<div id="main-nav-color" class="container-fluid fixed-top for-togle-htg" >
+  <!-- top nav  -->
+  <nav id="top-nav-hide" class="navbar navbar-expand-lg px-2 py-0 py-md-3 px-md-5 top-nav navbar-dark animate__animated animate__fadeInDown animate__slow">
+      <ul class="navbar-nav top-nav-contact">
+        <li class="nav-item ">
+          <a  class="nav-link text-white " href="mailto:example@gmail.com?subject=Interested%20in%20your%20services&body=Hello,%0D%0A%0D%0AI am interested in your services. Please contact me at your earliest convenience.%0D%0A%0D%0AThank you,%0D%0A[Your Name]"><i class="fa-regular fa-envelope"></i> &nbsp; example@gmail.com</a>
+        </li>
+        <li class="nav-item ">
+          <a  class="nav-link text-white " href="tel:03452678975"><i class="fa-brands fa-whatsapp"></i> &nbsp; 03452678975</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="#">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn btn-primary nav-bar-btn">Sign Up</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- login form start  -->
+
+
+<div id="id01" class="login-modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="./PICS/img_avatar2.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+<div id=""  class="confirm-pasword">
+      <label  for="confirm-psw"><b>Confirm the Password</b></label>
+      <input type="password" placeholder="Reenter Password" name="psw" required>
+    </div>
+      <button id="sign-up-button" type="submit" class="sign-up-btn">Create Account</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+    <div class="container d-flex flex-column justify-content-center">
+      <h4 id="own-account" class="text-center"> Already have account</h4>
+    <button id="" type="button" class="btn btn-primary login-btn" >Log In</button>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn sign-up-btn">Cancel</button>
+      
+      <span id="forget-password" class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+    <!-- login form end  -->
+    
+     <nav id="btm-nav" class="navbar navbar-expand-lg main-nav py-0 py-md-3 navbar-dark animate__animated animate__fadeInBottomRight animate__slow">
+      <div class="logo-p">
+    <a class="logo" href="/index.html">
+      
+      <img src="/PICS/new-icon.png" alt="icon" class=" logo-width ">
+    <span class="logo-text">B <span class="last-word">W</span></span>
+  </a>
+  </div>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto page-ul   mb-2 ml-5 mb-lg-0">
+          <li class="nav-item ">
+            <a  class="nav-link one text-white active-page py-1 py-md-2" aria-current="page" data-page="home" href="index.html">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one py-1 py-md-2" data-page="properties" href="properties.html" 
+           >Properties</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one py-1 py-md-2" data-page="testimonials" href="testimonials.html" 
+           >Testimonials</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one py-1 py-md-2" data-page="blogs" href="blogs.html" 
+           >Blogs</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one py-1 py-md-2" data-page="FAQS" href="FAQS.html" 
+           >FAQS</a>
+          </li>
+    
+          <li class="nav-item ">
+            <a  class="nav-link text-white one py-1 py-md-2" data-page="about-us" href="about-us.html">About Us</a>
+          </li>
+          <li class="nav-item ">
+            <a  class="nav-link text-white one py-1 py-md-2" data-page="contact-us" href="contact-us.html">Contact Us</a>
+          </li>
+          </ul>
+          <ul class="navbar-nav search-ul  ">
+            <!-- Add a search form to the navbar  -->
+    
+            <li class="nav-item d-flex ">
+              <input type="search" placeholder="Search Here !" >
+              <a  class="nav-link text-white" href="#"><i id="search-icon" class="fas fa-search nav-icon" ></i></a>
+            </li>
+          
+    
+          </ul>
+          
+            
+          
+        </div>
+    
+      </nav> 
+      </div>
+
+  <script>
+// to hide topnav on scroll 
+let topNav = document.querySelector('#top-nav-hide');
+let mainNav = document.querySelector('#main-nav-color');
+let nav = document.querySelector('#btm-nav');
+
+// Get the initial scroll position
+let prevScrollpos = window.pageYOffset;
+
+// On scroll event listener
+window.onscroll = function() {
+  // Get the current page URL
+  var currentUrl = window.location.href;
+  
+  // Check if the current page is the home page
+  if (currentUrl.indexOf('index.html') > -1) {
+    // Get the current scroll position
+    let currentScrollPos = window.pageYOffset;
+    
+    // Check if the user has scrolled down the page
+    if (prevScrollpos > currentScrollPos) {
+      // If not, show the top nav
+      topNav.style.display = 'flex';
+      mainNav.style.background = 'transparent';
+      nav.classList.remove('scroll-up');
+    } else if (currentScrollPos > 500) {
+      // If yes, hide the top nav
+      topNav.style.display = 'none';
+      mainNav.style.background = '#000';
+      nav.classList.add('scroll-up');
+    }
+    
+    // Update the previous scroll position
+    prevScrollpos = 500;
+  }
+};
+
+
+
+
+
+
+
+  $(document).ready(function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+    navbarCollapse.addEventListener('show.bs.collapse', () => {
+      navbarToggler.setAttribute('aria-expanded', 'true');
+      mainNav.style.height = 'fit-content';
+      mainNav.classList.remove('for-togle-htg');
+    });
+  
+    navbarCollapse.addEventListener('hide.bs.collapse', () => {
+      navbarToggler.setAttribute('aria-expanded', 'false');
+      mainNav.classList.add('for-togle-htg');
+    
+    });
+  
+
+  });
+  
+  $(document).ready(function() {
+    // Get the current page URL
+    var currentUrl = window.location.href;
+
+  
+    // Check if the URL contains "properties.html" and add "active" class to the corresponding link
+    
+    if (currentUrl.indexOf('properties.html') > -1 || currentUrl.indexOf('properties-details.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="properties"]').addClass('active-page');
+    }
+
+    // Check if the URL contains "testimonials.html" and add "active" class to the corresponding link
+
+    if (currentUrl.indexOf('testimonials.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="testimonials"]').addClass('active-page');
+    }
+
+    // Check if the URL contains "blogs.html" and add "active" class to the corresponding link
+
+    if (currentUrl.indexOf('blogs.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="blogs"]').addClass('active-page');
+    }
+    // Check if the URL contains "FAQS.html" and add "active" class to the corresponding link
+
+    if (currentUrl.indexOf('FAQS.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="FAQS"]').addClass('active-page');
+    }
+  
+    // Check if the URL contains "about us.html" and add "active" class to the corresponding link
+    if (currentUrl.indexOf('about-us.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="about-us"]').addClass('active-page');
+    }
+  
+    // Check if the URL contains "contact us.html" and add "active" class to the corresponding link
+    if (currentUrl.indexOf('contact-us.html') > -1) {
+      $('.one').removeClass('active-page');
+      $('a[data-page="contact-us"]').addClass('active-page');
+    }
+  
+    // Add click event listener to .one elements
+    $('.one').on('click', function() {
+      $('.one').removeClass('active-page');
+      $(this).addClass('active-page');
+    });
+  });
+
+  // this is for login form 
+  
+  $(document).ready(function() {
+  let confirm_password = document.querySelector(".confirm-pasword");
+  let login_button = document.querySelector(".login-btn");
+  let signup_button = document.querySelector("#sign-up-button");
+  let own_account = document.querySelector("#own-account");
+  let forget_password = document.querySelector("#forget-password")
+  login_button.onclick = function() {
+    confirm_password.classList.toggle("block-form");
+    if(confirm_password.classList.contains("block-form")){
+      signup_button.innerHTML = "Log In"
+      own_account.innerText = "Don't have account? Create one"
+      login_button.innerHTML = "Create Account"
+      forget_password.style.display = "block"
+    }else{
+      signup_button.innerHTML = "Create Account"
+      own_account.innerText = "Already have account"
+      login_button.innerHTML = "Log In"
+      forget_password.style.display = "none"
+
+    }
+  };
+});
+
+  
+  </script>
